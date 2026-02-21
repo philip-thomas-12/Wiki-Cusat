@@ -1,0 +1,128 @@
+.campus-map-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: inherit;
+}
+
+.leaflet-container-custom {
+    background-color: var(--bg-abyss) !important;
+    font-family: var(--font-sans) !important;
+}
+
+/* Custom Marker Styling */
+.custom-leaflet-marker {
+    background: transparent;
+    border: none;
+}
+
+.marker-pin {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--text-pure);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.marker-pin:hover {
+    transform: scale(1.3);
+}
+
+/* Premium Popup Overrides */
+.premium-popup .leaflet-popup-content-wrapper {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    padding: 0;
+    box-shadow: var(--shadow-lg), var(--glow-primary);
+    overflow: hidden;
+}
+
+.premium-popup .leaflet-popup-tip {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-strong);
+}
+
+.premium-popup .leaflet-popup-content {
+    margin: 0;
+    width: 280px !important;
+}
+
+/* Popup Content Internal Styling */
+.popup-content-card {
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.popup-content-card:hover {
+    background: var(--bg-surface-3);
+}
+
+.popup-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.popup-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--text-pure);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+}
+
+.popup-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+}
+
+.popup-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-pure);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.stat-item svg {
+    color: var(--text-muted);
+}
+
+.popup-action {
+    font-size: 0.8rem;
+    color: var(--color-brand-secondary);
+    font-weight: 600;
+    text-align: right;
+    opacity: 0.8;
+    transition: opacity var(--transition-fast);
+}
+
+.popup-content-card:hover .popup-action {
+    opacity: 1;
+}
+/* Push Leaflet controls down so they don't hide under the floating Navbar */
+.leaflet-top.leaflet-left {
+  margin-top: 90px;
+}

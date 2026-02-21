@@ -1,0 +1,22 @@
+/* Specific internal layout tools for Bento Grids if needed beyond what's in index.css */
+
+.bento-header {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bento-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--text-pure);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+}
+
+.bento-content {
+    height: calc(100% - 3rem);
+    /* rough approximation to allow internal scrolling */
+    position: relative;
+}
