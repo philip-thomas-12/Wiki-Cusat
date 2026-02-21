@@ -1,20 +1,22 @@
 import { Routes, Route } from 'react-router-dom';
 import { CampusMap } from './components/Map/CampusMap';
-import { AIAssistantWidget } from './components/Chat/AIAssistantWidget';
+import { ChatInterface } from '../chatbot/frontend/ChatInterface';
 import { Navbar } from './components/Layout/Navbar';
 import { InstitutionDetail } from './InstitutionDetail';
 import './index.css';
 
 function FullScreenMap() {
   return (
-    <div className="full-screen-map-container">
+    <div className="full-screen-map-container" style={{ position: 'relative' }}>
       <Navbar />
 
       <div className="map-view-area">
         <CampusMap />
       </div>
 
-      <AIAssistantWidget />
+      <div style={{ position: 'absolute', bottom: '20px', right: '20px', zIndex: 1000 }}>
+        <ChatInterface />
+      </div>
     </div>
   );
 }
